@@ -3,3 +3,6 @@ up project:
 
 up queue:
 	./vendor/bin/sail php artisan horizon
+
+create storage link:
+	./vendor/bin/sail php artisan storage:link
