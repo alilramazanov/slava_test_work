@@ -2,31 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Interfaces\FileServiceInterface;
 use App\Http\Requests\Excel\UploadExcelRequest;
-use App\Jobs\ParseExcelFileJob;
-use App\Models\File;
 use App\Models\Row;
 use DB;
-use Illuminate\Support\Facades\Cache;
 
 class ExcelController extends Controller
 {
+
+	public function __construct(
+		protected FileServiceInterface $fileService
+	)
+	{
+	}
+
+	/**
+	 * @param  UploadExcelRequest  $request
+	 * @return \Illuminate\Http\JsonResponse|void
+	 */
     public function store(UploadExcelRequest $request){
 
 	    $file = $request->file('file');
-	    $filename = $file->getClientOriginalName();
-	    $path = $file->store('public/files');
 
-	    $file = new File();
-	    $file->name = $filename;
-	    $file->path = $path;
-	    $file->save();
-
-	    $filePath = storage_path('app/' . $file->path);
-
-		ParseExcelFileJob::dispatch($filePath);
-
-	    return response()->json(['message' => 'Файл успешно загружен.']);
+		$isUpload = $this->fileService->uploadFile($file);
+		if ($isUpload){
+			return response()->json(['message' => 'File save completed']);
+		}
     }
 
 	public function index(){

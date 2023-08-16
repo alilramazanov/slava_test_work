@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('rows', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('uuid')->primary();
+			$table->bigInteger('id');
 			$table->string('name');
 			$table->date('date');
             $table->timestamps();

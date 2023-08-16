@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cadaa87d-b75c-47c2-8d01-0968a1b90266" name="Changes" comment="создание базовой структуры">
+    <list default="true" id="cadaa87d-b75c-47c2-8d01-0968a1b90266" name="Changes" comment="корректировки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExcelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExcelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/horizon.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/horizon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/ExcelService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/ExcelService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/RowObserver.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +159,9 @@
       <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
       <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
       <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
     </include_path>
   </component>
   <component name="ProjectId" id="2U1s4MMEDPcYboZuIkf5bVQ0NvS" />
@@ -219,7 +220,8 @@
       <option name="presentableId" value="Default" />
       <updated>1692118228340</updated>
       <workItem from="1692118229541" duration="10728000" />
-      <workItem from="1692187769539" duration="3325000" />
+      <workItem from="1692187769539" duration="30564000" />
+      <workItem from="1692637156619" duration="2893000" />
     </task>
     <task id="LOCAL-00002" summary="добавление очередей horizon">
       <created>1692118878720</created>
@@ -235,7 +237,42 @@
       <option name="project" value="LOCAL" />
       <updated>1692124758494</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="добавление функционала сохранения и парсинга файла, а так же получение колонок">
+      <created>1692191233015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692191233015</updated>
+    </task>
+    <task id="LOCAL-00005" summary="фикс">
+      <created>1692192174457</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692192174458</updated>
+    </task>
+    <task id="LOCAL-00006" summary="корректировки">
+      <created>1692479103641</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1692479103641</updated>
+    </task>
+    <task id="LOCAL-00007" summary="корректировки">
+      <created>1692639438744</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1692639438744</updated>
+    </task>
+    <task id="LOCAL-00008" summary="корректировки">
+      <created>1692639609865</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1692639609865</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +305,9 @@
     <MESSAGE value="настройка docker-compose sail" />
     <MESSAGE value="добавление очередей horizon" />
     <MESSAGE value="создание базовой структуры" />
-    <option name="LAST_COMMIT_MESSAGE" value="создание базовой структуры" />
+    <MESSAGE value="добавление функционала сохранения и парсинга файла, а так же получение колонок" />
+    <MESSAGE value="фикс" />
+    <MESSAGE value="корректировки" />
+    <option name="LAST_COMMIT_MESSAGE" value="корректировки" />
   </component>
 </project>
