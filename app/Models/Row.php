@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,14 +23,31 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Row whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Row whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Row whereUpdatedAt($value)
+ * @property string $uuid
+ * @method static \Illuminate\Database\Eloquent\Builder|Row whereUuid($value)
  * @mixin \Eloquent
  */
 class Row extends Model
 {
     use HasFactory;
+	use HasUuids;
 
 	protected $fillable = [
+		'id',
 		'name',
 		'date'
 	];
+
+	public function __construct(array $attributes = [])
+	{
+		parent::__construct($attributes);
+
+		$this->primaryKey = 'uuid';
+	}
+
+	public function getKeyName()
+	{
+		return 'uuid';
+	}
+
 }

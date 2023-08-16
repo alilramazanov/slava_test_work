@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|File whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|File wherePath($value)
  * @method static \Illuminate\Database\Eloquent\Builder|File whereUpdatedAt($value)
+ * @method static \Database\Factories\FileFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */
 class File extends Model
