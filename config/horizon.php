@@ -206,6 +206,8 @@ return [
 
         'local' => [
             'supervisor-1' => [
+	            'connection' => 'redis',
+				'queue' => ['parse_excel_file'],
                 'maxProcesses' => 3,
             ],
         ],

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cadaa87d-b75c-47c2-8d01-0968a1b90266" name="Changes" comment="добавление очередей horizon">
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+    <list default="true" id="cadaa87d-b75c-47c2-8d01-0968a1b90266" name="Changes" comment="создание базовой структуры">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExcelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExcelController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/horizon.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/horizon.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +14,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -24,6 +25,10 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JiraServerManager">
+    <selected>-1</selected>
+    <servers />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -151,6 +156,11 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
     </include_path>
   </component>
   <component name="ProjectId" id="2U1s4MMEDPcYboZuIkf5bVQ0NvS" />
@@ -163,7 +173,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/alil/projects/test/slava_test_work/app/Http/Requests",
+    "last_opened_file_path": "/home/alil/projects/test/slava_test_work",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -174,10 +184,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Makefile Target.queue">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
-      <method v="2" />
-    </configuration>
     <configuration name="queue" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="queue" workingDirectory="" arguments="">
         <envs />
@@ -212,7 +218,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1692118228340</updated>
-      <workItem from="1692118229541" duration="4705000" />
+      <workItem from="1692118229541" duration="10728000" />
+      <workItem from="1692187769539" duration="3325000" />
     </task>
     <task id="LOCAL-00002" summary="добавление очередей horizon">
       <created>1692118878720</created>
@@ -221,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692118878720</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="создание базовой структуры">
+      <created>1692124758494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692124758494</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +267,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="настройка docker-compose sail" />
     <MESSAGE value="добавление очередей horizon" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление очередей horizon" />
+    <MESSAGE value="создание базовой структуры" />
+    <option name="LAST_COMMIT_MESSAGE" value="создание базовой структуры" />
   </component>
 </project>

@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Excel\UploadExcelRequest;
+use App\Jobs\ParseExcelFileJob;
 use App\Models\File;
+use App\Models\Row;
+use DB;
+use Illuminate\Support\Facades\Cache;
 
 class ExcelController extends Controller
 {
@@ -13,24 +17,35 @@ class ExcelController extends Controller
 	    $filename = $file->getClientOriginalName();
 	    $path = $file->store('public/files');
 
-	    $fileModel = new File();
-	    $fileModel->name = $filename;
-	    $fileModel->path = $path;
-	    $fileModel->save();
+	    $file = new File();
+	    $file->name = $filename;
+	    $file->path = $path;
+	    $file->save();
 
-	    return response()->json(['message' => 'Файл успешно загружен.'], 200);
+	    $filePath = storage_path('app/' . $file->path);
+
+		ParseExcelFileJob::dispatch($filePath);
+
+	    return response()->json(['message' => 'Файл успешно загружен.']);
     }
 
-	public function show($id){
-		$file = File::query()->find($id);
+	public function index(){
 
-		$filePath = storage_path('app/' . $file->path);
+		$rows = Row::query()
+			->select(['date', DB::raw('json_agg(name) as names'), DB::raw('json_agg(id) as ids')])
+			->groupBy('date')
+			->orderBy('date')
+			->get()
+			->mapWithKeys(function ($row) {
+				return [
+					$row->date => [
+						'ids' => json_decode($row->ids),
+						'names' => json_decode($row->names)
+					]
+				];
+			});
 
-		return response()->download($filePath, $file->name);
-	}
-
-	public function parsing($id){
-
+		return response()->json($rows);
 
 	}
 }
