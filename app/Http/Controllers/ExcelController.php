@@ -15,6 +15,8 @@ class ExcelController extends Controller
 		protected FileServiceInterface $fileService
 	)
 	{
+
+		$this->middleware('auth:sanctum')->only('store');
 	}
 
 	/**

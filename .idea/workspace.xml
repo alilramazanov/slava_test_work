@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cadaa87d-b75c-47c2-8d01-0968a1b90266" name="Changes" comment="корректировки" />
+    <list default="true" id="cadaa87d-b75c-47c2-8d01-0968a1b90266" name="Changes" comment="добавление аутентификации">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +22,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
@@ -28,6 +33,9 @@
     </option>
     <option name="currentCommit" value="1" />
     <option name="onto" value="a8953b6228990b6a42efceac6d947b69c7c9037a" />
+  </component>
+  <component name="JQLSearcherProjectManager">
+    <searchers />
   </component>
   <component name="JiraServerManager">
     <selected>-1</selected>
@@ -180,13 +188,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/alil/projects/aksiomatix/joker-crm",
+    "last_opened_file_path": "/home/alil/projects/smart_dev/mappa/mappa-api",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Requests/User" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/Http/Requests" />
     </key>
@@ -308,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692811281335</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="добавление аутентификации">
+      <created>1692821952610</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1692821952610</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +360,8 @@
     <MESSAGE value="добавление функционала сохранения и парсинга файла, а так же получение колонок" />
     <MESSAGE value="фикс" />
     <MESSAGE value="корректировки" />
-    <option name="LAST_COMMIT_MESSAGE" value="корректировки" />
+    <MESSAGE value="тест для загрузки" />
+    <MESSAGE value="добавление аутентификации" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавление аутентификации" />
   </component>
 </project>
