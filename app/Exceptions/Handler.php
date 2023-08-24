@@ -2,15 +2,9 @@
 
 namespace App\Exceptions;
 
-use App\Http\Resources\ErrorResource;
-use Illuminate\Contracts\Container\Container;
-use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\UnauthorizedException;
-use Illuminate\Validation\ValidationException;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
